@@ -1,2 +1,2 @@
-# alx-low_level_programming
-A repository that contains some low-level C code for the ALX Software Engineering program.
+# ALX Low-Level Programming
+###### A repository that contains some low-level C code for the ALX Software Engineering program.

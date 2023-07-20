@@ -3,10 +3,11 @@
 
 /**
  * Description: a header file that includes function
- * prototypes for the current project.
+ * prototypes for the current project
  */
 
 int _putchar(char c);
 void print_alphabet(void);
+void print_alphabet_x10(void);
 
 #endif /* _MAIN_H_ */

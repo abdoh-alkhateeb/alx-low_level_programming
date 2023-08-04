@@ -19,6 +19,19 @@ int check_string(char *s, int l, int r)
 }
 
 /**
+ * _strlen_recursion - a function that returns the length of a string.
+ * @s: string to find length for.
+ *
+ * Return: length of s.
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s)
+		return (1 + _strlen_recursion(s + 1));
+	return (0);
+}
+
+/**
  * is_palindrome - a function that returns 1
  * if a string is a palindrome and 0 if not.
  * @s: string to check.
@@ -29,8 +42,7 @@ int is_palindrome(char *s)
 {
 	int n;
 
-	for (n = 0; s[n] != '\0'; n++)
-		;
+	n = _strlen_recursion(s);
 
 	if (n == 0)
 		return (1);

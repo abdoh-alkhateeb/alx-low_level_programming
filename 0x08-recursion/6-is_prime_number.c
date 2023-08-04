@@ -14,7 +14,7 @@ int check_factor(int number, int factor)
 	if (number == factor)
 		return (1);
 
-	check_factor(number, factor + 1);
+	return (check_factor(number, factor + 1));
 }
 
 /**

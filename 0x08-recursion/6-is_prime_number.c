@@ -8,11 +8,11 @@
  */
 int check_factor(int number, int factor)
 {
-	if (number % factor == 0)
-		return (0);
-
 	if (number == factor)
 		return (1);
+
+	if (number % factor == 0)
+		return (0);
 
 	return (check_factor(number, factor + 1));
 }

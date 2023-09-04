@@ -31,15 +31,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (bytes_read == -1)
 	{
-		close(fd);
 		free(buffer);
+		close(fd);
 		return (0);
 	}
 
 	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
 
-	close(fd);
 	free(buffer);
+	close(fd);
 
 	if (bytes_written != bytes_read)
 		return (0);

@@ -10,41 +10,44 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *hash_node, **p, *q;
+	hash_node_t *hash_node, *p;
+	unsigned long int index;
 
 	if (ht == NULL || key == NULL || value == NULL || strlen(key) == 0)
 		return (0);
 
-	hash_node = (hash_node_t *)malloc(sizeof(hash_node_t));
+	index = key_index((const unsigned char *)key, ht->size);
 
+	for (p = ht->array[index]; p != NULL; p = p->next)
+	{
+		if (strcmp(key, p->key) == 0)
+		{
+			free(p->value);
+			p->value = strdup(value);
+			return (1);
+		}
+	}
+
+	hash_node = (hash_node_t *)malloc(sizeof(hash_node_t));
 	if (hash_node == NULL)
 		return (0);
 
-	hash_node->key = (char *)key;
-
-	hash_node->value = strdup(value);
-
-	if (hash_node->value == NULL)
+	hash_node->key = strdup(key);
+	if (hash_node->key == NULL)
 	{
 		free(hash_node);
 		return (0);
 	}
 
-	hash_node->next = NULL;
-
-	p = &(ht->array[key_index((const unsigned char *)key, ht->size)]);
-
-	if (*p == NULL)
-		*p = hash_node;
-	else
+	hash_node->value = strdup(value);
+	if (hash_node->value == NULL)
 	{
-		q = *p;
-
-		while (q->next != NULL)
-			q = q->next;
-
-		q->next = hash_node;
+		free(hash_node->key);
+		free(hash_node);
+		return (0);
 	}
 
+	hash_node->next = ht->array[index];
+	ht->array[index] = hash_node;
 	return (1);
 }

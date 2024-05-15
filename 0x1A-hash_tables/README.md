@@ -1,1 +1,1 @@
-0x1A. C - Hash tables
+This directory houses code that demonstrates hash tables and related concepts.

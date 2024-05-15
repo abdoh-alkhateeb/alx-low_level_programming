@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_binary - a function that prints the binary representation of a number
- * @n: number to process
+ * print_binary - a function that prints the binary representation of a number.
+ * @n: number to process.
  *
- * Return: nothing
+ * Return: nothing.
  */
 void print_binary(unsigned long int n)
 {

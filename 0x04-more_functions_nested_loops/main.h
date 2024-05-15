@@ -3,7 +3,7 @@
 
 /**
  * Description: a header file that includes function
- * prototypes for the current project
+ * prototypes for the current project.
  */
 
 int _putchar(char);

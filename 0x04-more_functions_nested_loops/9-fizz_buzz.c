@@ -7,7 +7,7 @@
  * five print Buzz. For numbers which are multiples
  * of both three and five print FizzBuzz.
  *
- * Return: always 0 (success)
+ * Return: always 0 (success).
  */
 int main(void)
 {

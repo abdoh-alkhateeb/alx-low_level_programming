@@ -2,9 +2,9 @@
 #include <math.h>
 
 /**
- * main - entry point of program
+ * main - entry point of program.
  *
- * Return: always 0 (success)
+ * Return: always 0 (success).
  */
 int main(void)
 {

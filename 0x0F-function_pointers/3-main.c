@@ -3,9 +3,9 @@
 #include "3-calc.h"
 
 /**
- * main - Entry point
- * @argc: Number of arguments
- * @argv: Array of argument strings
+ * main - Entry point.
+ * @argc: Number of arguments.
+ * @argv: Array of argument strings.
  *
  * Return: 0 on success, 98 on wrong number of arguments,
  *         99 on invalid operator, 100 on division/modulo by 0.

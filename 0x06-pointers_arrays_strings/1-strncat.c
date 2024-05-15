@@ -3,7 +3,7 @@
 /**
  * _strncat - a function that concatenates two strings.
  * @src: the string to copy.
- * @dest: the string to copy to its end;
+ * @dest: the string to copy to its end.
  * @n: number of characters to copy.
  *
  * Return: pointer to dest.

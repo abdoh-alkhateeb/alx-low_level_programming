@@ -2,10 +2,10 @@
 
 /**
  * print_times_table - a function that prints
- * the n times table, starting with 0
- * @n: the number which will have its times table printed
+ * the n times table, starting with 0.
+ * @n: the number which will have its times table printed.
  *
- * Return: void
+ * Return: void.
  */
 void print_times_table(int n)
 {

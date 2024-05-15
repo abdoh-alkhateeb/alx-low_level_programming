@@ -1,1 +1,1 @@
-0x18. C - Dynamic libraries
+This directory houses code that demonstrates dynamic libraries and related concepts.
